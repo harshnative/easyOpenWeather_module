@@ -104,6 +104,6 @@ obj.printData()
 
 ### Contibute - 
 
-[Post any issues on github](https://github.com/harshnative/nativeOpenWeather_Module)
+[Post any issues on github](https://github.com/harshnative/easyOpenWeather_module)
 
-[Check out code on github](https://github.com/harshnative/nativeOpenWeather_Module)
+[Check out code on github](https://github.com/harshnative/easyOpenWeather_module)
