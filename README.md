@@ -19,7 +19,7 @@ pip install tabulate
 ```
 
 
-To import in project - 
+### To import in project - 
 ```python
 from easyOpenWeather import module
 ```
