@@ -249,8 +249,9 @@ if __name__ == "__main__":
     obj = WeatherDataClass()
 
     obj.setCityName("london")
-    obj.setApiKey("fe82651e607e46db61dba45e39aa7e17")
-    
+    obj.setApiKey("fe82651e60******61dba45e39aa7e17")
+	# fill your api key here
+	    
     listPass = ["tempInC" , "tempMin" , "tempMax" , "pressure" , "humidity" , "windSpeed" , "windDirection" , "clouds" , "description"]
 
     obj.setList(listPass)
