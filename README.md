@@ -4,22 +4,13 @@ This module is used to get or print the weather deatils using open weather API e
 
 install module using pip command
 ```shell
-pip install easyOpenWeather
-```
-
-### external dependencies required - 
-1. requests
-```shell
-pip install requests
-```
-
-2. tabulate
-```shell
-pip install tabulate
+pip install easyOpenWeather==0.3
 ```
 
 
-### To import in project - 
+
+
+### How to import - 
 ```python
 from easyOpenWeather import module
 ```
@@ -29,11 +20,16 @@ Then make a object instance of WeatherDataClass
 obj = module.WeatherDataClass()
 ```
 
-Now you need to at least set the city name and api key first
+Now you need to at least set the city name
 ```python
 obj.setCityName("london")
-obj.setApiKey("fe82651e607e4******ba45e39aa7e17")
 ```
+
+Module uses the built api key , as in built api is used by many people it may be sometimes busy and produce error , to be on safe side set your own api key :
+```python
+obj.setApiKey("fe82651e60**************9aa7e17")
+```
+
 
 To know how to get your own api key from open weather [click here](https://openweathermap.org/appid#:~:text=1.,activated%20and%20ready%20to%20use.)
 
@@ -63,12 +59,12 @@ obj.setList(listPass)
 
 To get data in dictionary format - 
 ```python
-obj.getInfo()
+print(obj.getInfo())
 ```
 
 The function will return a dictionary.
 
-Sample dictionary that you will get for listPass = ["tempInC" , "tempMin" , "tempMax" , "pressure" , "humidity" , "windSpeed" , "windDirection" , "clouds" , "description"] :
+Sample dictionary that you will get for listPass = ["tempInC" , "tempMin" , "tempMax" , "pressure" , "humidity" , "windSpeed" , "windDirection" , "clouds" , "description"] =
 
 {'tempInC': 11.01, 'tempMin': 10.71, 'tempMax': 11.82, 'pressure': 998, 'humidity': 53, 'windSpeed': 8.7, 'windDirection': 260, 'clouds': 9, 'description': 'clear sky'}
 
@@ -94,12 +90,25 @@ from easyOpenWeather import module
 obj = module.WeatherDataClass()
 
 obj.setCityName("london")
-obj.setApiKey("fe82651e607e46db61dba45e39aa7e17")
     
 listPass = ["tempInC" , "tempMin" , "tempMax" , "pressure" , "humidity" , "windSpeed" , "windDirection" , "clouds" , "description"]
 
 obj.setList(listPass)
 obj.printData()
+
+
+# output 
+# Weather Query    Data Received
+# ---------------  ---------------
+# tempInC          6.45
+# tempMin          5.71
+# tempMax          7.15
+# pressure         1000
+# humidity         81
+# windSpeed        2.6
+# windDirection    100
+# clouds           75
+# description      broken clouds
 ```
 
 ### Contibute - 
